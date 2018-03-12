@@ -12,8 +12,11 @@ const webpackConfig = require('./webpack.config.js');
 //слежка
 function watch(){
     gulp.watch(paths.styles.src,styles),
-    gulp.watch(paths.templates.src,templates)
-    gulp.watch(paths.scripts.src,scripts)
+    gulp.watch(paths.templates.src,templates),
+    gulp.watch(paths.scripts.src,scripts),
+    gulp.watch('./*.html',html),
+    gulp.watch('src/img/**/*',img)
+    
 }
 
 //живой сервер
@@ -26,6 +29,23 @@ function server(){
     '/**/*.*', browserSync.reload);
 }
 
+//перемещение html
+ function html(){
+    return gulp.src('./*.html') 
+    .pipe(gulp.dest('build/'))
+ }
+
+ //перемещение img
+ function img(){
+    return gulp.src('src/img/**/*') 
+    .pipe(gulp.dest('build/img/'))
+ }
+
+ //перемещение img
+ function fonts(){
+    return gulp.src('src/fonts/**/*') 
+    .pipe(gulp.dest('build/assets/fonts/'))
+ }
 
 const paths = {
     root:'./build',
@@ -40,7 +60,7 @@ const paths = {
         dest:'build/assets/styles'
     },
     scripts:{
-        src:'src/js/**/*.js',
+        src:'src/scripts/**/*.js',
         main:'src/scripts/app.js',
         dest:'build/assets/scripts'
     }
@@ -76,7 +96,8 @@ function scripts(){
 
 gulp.task('default',gulp.series(
     clean,
-    gulp.parallel(styles,templates,scripts),
+    gulp.parallel(styles,scripts,img),//templates,
+    html, fonts,
     gulp.parallel(watch, server)
 ))
 
