@@ -1,0 +1,24 @@
+.work__left {
+    width: 50%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    background-color: $bkg_lightgrey;
+}
+
+.work__right{
+    width: 50%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bkg_lightmain;
+}
+
+.work__skills{
+    display: block;
+    color:$main;
+    text-transform:uppercase;
+}

@@ -1,0 +1,24 @@
+.title{
+    font-size:35px;
+}
+
+.title--dark{
+    font-family: 'sansus_webissimoregular','Arial';
+    font-size:63px;
+    color:$dark_font;
+    text-transform:uppercase;
+    // font-weight:700;
+}
+
+.title--grey{
+    font-family: 'sansus_webissimoregular','Arial';
+    color:$mid_font;
+    font-size:35px;
+    text-transform:uppercase;
+    // font-weight:700;
+}
+
+.title--light{
+    color:$light_font;
+    font-size:28px;
+}

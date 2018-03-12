@@ -1,0 +1,22 @@
+.header__hamburger{
+    
+    width: 25px;
+    height: 25px;
+    margin-right:5%;
+    position:relative;
+    display: inline-block;
+    
+    &-strip{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 20%;
+    box-sizing: border-box;
+    background-color: $white;
+      
+    &:last-child{
+        margin-bottom: 0;
+    }
+      
+    }    
+     
+}

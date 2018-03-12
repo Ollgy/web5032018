@@ -1,0 +1,35 @@
+.blognav{
+    flex:1;
+    height: 100%;
+    display:flex;
+    align-items: flex-start;
+    padding: 15px;
+    text-align: left;
+
+    &__link{
+        text-decoration:none;
+        color:$mid_font;
+    }
+
+    &__item{
+        margin-bottom: 40px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.blogcontent{
+    flex:3;
+    height: 100%;
+    display:flex;
+    align-items: flex-start;
+    text-align:left;
+}
+
+.empty{
+    display:block;
+    content:"";
+    height:175px;
+}

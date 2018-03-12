@@ -1,0 +1,40 @@
+.footer{
+    width: 100%;
+    position:absolute;
+    text-align:center;
+    bottom:0;
+
+    &__main{
+        width: 100%;
+        background-color: $smoky;
+        padding: 30px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__where{
+        flex:1
+    }
+
+    &__info{
+        flex:1
+    }
+
+    &__credo{
+        flex:1;
+        font-weight:300;
+        font-style: italic;
+        color:$footer_font;
+        text-align: left;
+    }
+
+    &__personality{
+        background-color: $main;
+    }
+
+    &--relative{
+        margin-top: -172px;
+        height: 172px;
+        position:relative;
+    }
+}
