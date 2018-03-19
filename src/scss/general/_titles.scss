@@ -1,13 +1,53 @@
 .title{
     font-size:35px;
+    color:$white;
 }
 
+.title--small{
+    font-size: 25px;
+    color: $light_font;
+    margin-bottom: 20px;
+}
 .title--dark{
     font-family: 'sansus_webissimoregular','Arial';
     font-size:63px;
     color:$dark_font;
     text-transform:uppercase;
-    // font-weight:700;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index:10;
+    
+    
+    &:after{
+        width: 90px;
+        height: 3px;
+        display:block;
+        content: "";
+        background-color:$dark_font;
+        margin-top: 20px;
+    }
+}
+
+.title--white{
+    font-family: 'sansus_webissimoregular','Arial';
+    font-size:63px;
+    color:$white;
+    text-transform:uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index:10;    
+    
+    &:after{
+        width:90px;
+        height:3px;
+        display:block;
+        content: "";
+        background-color:$white;
+        margin-top: 20px;
+    }
+
 }
 
 .title--grey{
@@ -15,10 +55,61 @@
     color:$mid_font;
     font-size:35px;
     text-transform:uppercase;
-    // font-weight:700;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index:10;
+    
+    &:after{
+        width: 90px;
+        height: 3px;
+        display:block;
+        content: "";
+        background-color:$mid_font;
+        margin-top: 20px;
+    }
+}
+
+.title--greywu{
+    font-family: 'sansus_webissimoregular','Arial';
+    color:$mid_font;
+    font-size:35px;
+    margin-bottom: 20px;
 }
 
 .title--light{
+    font-family: 'sansus_webissimoregular','Arial';
     color:$light_font;
     font-size:28px;
+    text-transform:uppercase;
+
+    &:after{
+        width: 90px;
+        height: 3px;
+        display:block;
+        content: "";
+        background-color:$light_font;
+        margin-top: 20px;
+    }
+}
+
+.title--lowwhite{
+    font-family: 'sansus_webissimoregular','Arial';
+    font-size:28px;
+    color:$white;
+    text-transform:uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index:10;    
+    
+    &:after{
+        width:90px;
+        height:3px;
+        display:block;
+        content: "";
+        background-color:$white;
+        margin-top: 20px;
+    }
+
 }

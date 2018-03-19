@@ -1,0 +1,45 @@
+.social{
+
+    &__list{
+        //height: 100px;
+        //display: flex;
+        //align-items: center;
+        //justify-content: center;
+    }
+    
+    &__item{
+        display:inline-block;
+        margin-right: 30px;
+        
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    
+    &__icon{
+        width: 35px;
+        height: 35px;
+        fill:$light_font;
+        position: center center;
+        transition: 0.5s;
+
+        &:hover{
+            fill:$main_dark;
+            transition: 0.5s;
+        }
+
+        &--white{
+            fill:$white;
+        }
+
+        &--hoverwhite{
+
+            &:hover{
+            fill:$white;
+            transition: 0.5s;
+            }
+        }   
+        
+    }
+}

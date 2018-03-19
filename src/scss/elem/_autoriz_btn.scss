@@ -1,0 +1,36 @@
+.autorization{   
+    top:3%;
+    right:3%;
+    position:absolute;
+   
+    &__link{
+        display: flex;
+        align-items: center;
+        padding: 10px 20px 10px 20px;
+        border-radius:22.5px;
+        border: 1px solid white;
+        text-decoration: none;
+        color: white; 
+        font-weight:500; 
+        transition: 0.5s; 
+        
+        &--green{
+            background-color: $main;
+        }
+
+
+        &:hover{
+            border: 1px solid $main;
+            background-color: $main_dark;
+            transition: 0.5s;
+        }
+    }
+
+    &__icon{
+        width: 20px;
+        height: 20px;
+        display:inline-block;
+        margin-right: 10px;
+        fill:white;
+    }
+}

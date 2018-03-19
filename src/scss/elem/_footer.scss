@@ -3,6 +3,11 @@
     position:absolute;
     text-align:center;
     bottom:0;
+    font-weight:300;
+
+    &__nav{
+        margin-bottom: 25px;
+    }
 
     &__main{
         width: 100%;
@@ -13,28 +18,43 @@
     }
 
     &__where{
-        flex:1
+        flex:1;
+        text-align: left;
+        color:$white;
     }
 
     &__info{
-        flex:1
+        flex:1;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-left:1px solid $footer_font;
+        border-right:1px solid $footer_font;
+    }
+
+    &__social{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     &__credo{
-        flex:1;
+        flex:1;  
+        height: 100%;   
         font-weight:300;
         font-style: italic;
         color:$footer_font;
         text-align: left;
+        padding-left: 35px;
     }
 
     &__personality{
         background-color: $main;
+        padding: 10px;
     }
 
     &--relative{
-        margin-top: -172px;
-        height: 172px;
+        margin-top: -$footer_height;
+        height: $footer_height;
         position:relative;
     }
 }

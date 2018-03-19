@@ -1,0 +1,11 @@
+include ../common/header.pug
+svg.portfolio__header
+    use(xlink:href="img/sprite.svg#portfolio_header")
+.person__desc.person__desc--bkg
+    img.person__photo(alt="Ольга Баранова" src='img/pages/welcome/photo2.jpg')
+    .title Баранова Ольга
+    p.person__site.person__site--white Личный сайт веб-разработчика
+.arrowdown
+    a(href="").arrowdown__link
+        svg.arrowdown__icon
+            use(xlink:href="img/sprite.svg#arrow_down")
