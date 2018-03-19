@@ -1,0 +1,50 @@
+extends ../common/general.pug
+
+block wrapper
+    .wrapper
+        section.section(style="background-image:url('img/pages/welcome/bkg.jpg')")
+            .container.container--top
+                .person
+                    .person__block
+                        .about__title
+                            .title.title--lowwhite Авторизуйтесь
+                        form.form__connect(action="")
+                            .form__text
+                                label.form__block(for="")
+                                    .form__block-icon
+                                        svg.form__icon
+                                            use(href="img/sprite.svg#login")
+                                    input.form__input.form__input--bkgwhite(type="text", placeholder="Логин", id="login", name="login")
+                                label.form__block(for="")
+                                    .form__block-icon
+                                        svg.form__icon
+                                            use(href="img/sprite.svg#password")
+                                    input.form__input.form__input--bkgwhite(type="text", placeholder="Пароль", id="password", name="password")
+                            .form__row
+                                label.form__checkbox
+                                    input.form__checkbox-input(type="checkbox", id="norobot", name="norobot", value='1')
+                                    .form__checkbox-custom
+                                        svg.form__checkbox-icon
+                                            use(xlink:href="img/sprite.svg#check")
+                                    span Я человек
+                            .form__row
+                                b Вы точно не робот?
+                            .form__row
+                                label.form__radio
+                                    input.form__radio-btn(type="radio", name="robot", id="yes", value="Да", checked)
+                                    .form__radio-custom
+                                    span.form__radio-title Да
+                                label.form__radio
+                                    input.form__radio-btn(type="radio", name="robot", id="No", value="No")
+                                    .form__radio-custom
+                                    span.form__radio-title Не уверен
+                            .empty(style="width:100%; height:30px")
+                               
+                            .form__buttons
+                                button.form__button.form__button--rightborder(type="button",  id="mainbtn") На главную
+                                button.form__button(type="submit",  id="submit") Войти
+                footer.person__footer
+                    ul.person__footer-list
+                        li.person__footer-item.person__footer-item--white © Баранова Ольга
+                        li.person__footer-item.person__footer-item--white Создано с любовью в LoftSchool
+                        li.person__footer-item.person__footer-item--white 2018

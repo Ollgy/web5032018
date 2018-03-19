@@ -1,0 +1,143 @@
+extends ../common/general.pug
+    
+block wrapper 
+    .wrapper
+        section.section(style="background-image:url('img/pages/welcome/bkg.jpg')")
+            .container
+                include ../common/section_header.pug
+        section.section.section--about
+            .section__left.section__left--about
+                .triangle
+                    svg.triangle__svg(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 1200 115", preserveaspectratio="none")
+                        polygon.triangle__left(points="0,0   0,115   600,115   600,105.5")
+                .container.container--column.container--about
+                    .about__left
+                        .about__title
+                            svg.about__icon
+                                use(xlink:href="img/sprite.svg#about_header")
+                            .title.title--dark Обо мне
+                        .about__info
+                            img.about__photo(src="img/pages/about/photo1.jpg" alt="Фото1") 
+                            .about__desc
+                                .about__title
+                                    .title.title--light Кто я
+                                .about__desc-txt
+                                    p  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, doloremque accusantium,
+                                        explicabo dignissimos provident ab minus natus voluptas aut at numquam odio consequuntur
+                                        quibusdam magni sed veniam exercitationem aliquid voluptatem?Sequi architecto culpa
+                                        omnis aut voluptas explicabo quia, accusamus ut temporibus animi neque assumenda
+                                        tenetur atque nobis quam quaerat aperiam officia! Quidem, exercitationem eligendi!
+                                        Magnam consequatur deleniti deserunt reiciendis hic
+                                    p  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, doloremque accusantium,
+                                        explicabo dignissimos provident ab minus natus voluptas aut at numquam odio consequuntur
+                                        quibusdam magni sed veniam exercitationem aliquid voluptatem?Sequi architecto culpa
+                                        omnis aut voluptas explicabo quia, accusamus ut temporibus animi neque assumenda
+                                        tenetur atque nobis quam quaerat aperiam officia! Quidem, exercitationem eligendi!
+                                        Magnam consequatur deleniti deserunt reiciendis hic
+                                    p  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, doloremque accusantium,
+                                        explicabo dignissimos provident ab minus natus voluptas aut at numquam odio consequuntur
+                                        quibusdam magni sed veniam exercitationem aliquid voluptatem?Sequi architecto culpa
+                                        omnis aut voluptas explicabo quia, accusamus ut temporibus animi neque assumenda
+                                        tenetur atque nobis quam quaerat aperiam officia! Quidem, exercitationem eligendi!
+                                        Magnam consequatur deleniti deserunt reiciendis hic   
+            .section__right.section__right--about
+                .triangle
+                    svg.triangle__svg(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 1200 115", preserveaspectratio="none")
+                        polygon.triangle__right(points="1200,0   1200,115   600,115   600,105.5")
+                .container.container--column.container--about
+                    .about__right
+                        .about__title
+                            .title.title--grey Чем я могу быть #[br] вам полезен
+                        .about__right-text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit blanditiis recusandae veniam sunt, deserunt qui ad, consequatur
+                                            dignissimos ducimus animi nihil eveniet nisi excepturi autem unde amet accusantium vel iusto.Reiciendis
+                                            consequuntur eos dolorum. Itaque ipsam voluptas rem ad officiis, consectetur aut sequi sunt sint,
+                                            quas in nobis? Labore sed at modi facilis deserunt dolore perferendis blanditiis, illum ullam
+                                            minima
+                        .skills
+                            .skills__block
+                                .title.title--small Frontend
+                                ul.skills__list
+                                    li.skills__item
+                                        .skills__name HTML5
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-85(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                                    li.skills__item
+                                        .skills__name CSS3
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-65(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                                    li.skills__item
+                                        .skills__name JavaScript & jQuery
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-35(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                            .skills__block
+                                .title.title--small Backend
+                                ul.skills__list
+                                    li.skills__item
+                                        .skills__name PHP
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-15(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                                    li.skills__item
+                                        .skills__name mySQL
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-15(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                                    li.skills__item
+                                        .skills__name Node.js & npm
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-15(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                                    li.skills__item
+                                        .skills__name Mongo.db
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-15(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                            .skills__block
+                                .title.title--small Workflow
+                                ul.skills__list
+                                    li.skills__item
+                                        .skills__name GIT
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-20(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                                    li.skills__item
+                                        .skills__name Gulp
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-25(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+                                    li.skills__item
+                                        .skills__name Webpack
+                                        svg.skills__ring
+                                            circle.skills__circle(r="45", cx="50%", cy="50%")
+                                            circle.skills__circle.skills__circle--colored.circle-15(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
+    
+        .section.section--map
+                .container
+                    .contacts
+                        .about__title
+                            .title.title--grey Контакты
+                        ul.contacts__list
+                            li.contacts__item
+                                a(href="").contacts__link
+                                    svg.contacts__icon
+                                        use(xlink:href="img/sprite.svg#skype")
+                                    .contacts__text olgabaranovaskype
+                            li.contacts__item
+                                a(href="").contacts__link
+                                    svg.contacts__icon
+                                        use(xlink:href="img/sprite.svg#envelope")
+                                    .contacts__text bo_40388@mail.ru
+                            li.contacts__item
+                                a(href="tel:879516473087").contacts__link
+                                    svg.contacts__icon
+                                        use(xlink:href="img/sprite.svg#phone")
+                                    .contacts__text +79516473087
+                            li.contacts__item
+                                a(href="").contacts__link
+                                    svg.contacts__icon
+                                        use(xlink:href="img/sprite.svg#map_marker")
+                                    .contacts__text г.Санкт-петербург ул.Есенина д.36 корп.1  
+        include ../common/footer.pug  

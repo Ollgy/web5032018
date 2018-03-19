@@ -1,0 +1,78 @@
+extends ../common/general.pug
+
+block wrapper
+    .wrapper
+        section.section(style="background-image:url('img/pages/welcome/bkg.jpg')")
+                .container
+                    include ../common/section_header.pug
+        .section.section--work
+            .work__title
+                svg.work__icon
+                    use(xlink:href="img/sprite.svg#works_header")
+                .title.title--dark Мои работы
+            .section__content--work
+                .section__left.section__left--work
+                    .triangle
+                        svg.triangle__svg(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 1200 115", preserveaspectratio="none")
+                            polygon.triangle__left.triangle__left--work(points="0,0   0,115   600,115   600,105.5")
+                    .container.container--column.container--about
+                        .work__left
+                            .about__title
+                                .title.title--grey Сайт школы образования
+                            .work__skills html, css, javascript
+                            a(href="").autorization__link.autorization__link--green
+                                svg.autorization__icon
+                                    use(xlink:href="img/sprite.svg#link") 
+                                span Посмотреть сайт
+                .section__right.section__right--work 
+                    .triangle
+                        svg.triangle__svg(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 1200 115", preserveaspectratio="none")
+                            polygon.triangle__right.triangle__right--work(points="1200,0   1200,115   600,115   600,105.5")               
+                    .container.container--column.container--about
+                        .work__right
+        section.section.section--review(style="background-image:url('img/pages/works/bkg.jpg')")
+            .container.container--column
+                img.section--review__bkgphoto1(src="img/pages/works/list1.png" alt="литст декор")
+                img.section--review__bkgphoto2(src="img/pages/works/list2.png" alt="литст декор")
+                img.section--review__bkgphoto3(src="img/pages/works/list3.png" alt="литст декор")
+                .about__title
+                    svg.about__icon.about__icon--work
+                        use(xlink:href="img/sprite.svg#about_header")
+                    .title.title--dark Что обо мне #[br] говорят
+                .review
+                    ul.review__list
+                        li.review__item
+                            img.review__photo(src="img/pages/works/review/dmitr.jpg" alt="фото отзыв")
+                            .review__desc
+                                .review__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
+                                    img.review__text-icon(src="img/pages/works/sign.png" alt="зпт")                                                                     
+                                    .review__person
+                                span.review__person-name Дмитрий Ковальчук
+                                span.review__person-func -основатель LoftSchool
+                        li.review__item
+                            img.review__photo(src="img/pages/works/review/vladimir.jpg" alt="фото отзыв")
+                            .review__desc
+                                .review__text Этот код выдержит любые испытания. Только, пожалуйста, не загружается сайт на слишком старых браузерах!
+                                    img.review__text-icon(src="img/pages/works/sign.png" alt="зпт") 
+                                                                                        
+                                    .review__person
+                                span.review__person-name Владимир Сабанцев
+                                span.review__person-func -преподаватель
+                .form
+                    .form__box
+                        .about__title
+                            .title.title--grey Связаться со мной
+                        form.form__connect(action="")
+                            .form__text
+                                label.form__block(for="")
+                                    input.form__input(type="text", placeholder="Имя", id="name", name="name")
+                                label.form__block(for="")
+                                    input.form__input(type="text", placeholder="Email", id="email", name="email")
+                                label.form__block(for="")
+                                    textarea.form__textarea(type="textarea", placeholder="Ваше сообщение", id="comment", name="comment")
+                            .form__buttons
+                                button.form__button.form__button--rightborder(type="submit",  id="submit") Отправить
+                                button.form__button(type="button",  id="mainbtn") На главную
+        include ../common/footer.pug
+
+
