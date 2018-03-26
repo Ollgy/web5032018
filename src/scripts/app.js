@@ -17,9 +17,9 @@ const water = require('./water/index-water.js');
 
 
 //hamburger.overlay();
-flipper.flip();
+//flipper.flip();
 //parallax.scrollParallax();
-//water.webgl();
+water.webgl();
 
 
 

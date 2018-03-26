@@ -1,4 +1,4 @@
-//import curry from 'curry'
+import curry from 'curry'
 
 export default (width,height,dpiAware=true)=>{
   const object={
