@@ -1,27 +1,71 @@
+.autorization{   
+    top:rem(20px);
+    right:rem(20px);   
+    position:absolute;
+    z-index:20;
+
+    @include phones{
+        right:50%;
+        transform: translate(50%,0);
+    }
+}
+
 .person{
     width: 100%;
-    height: calc(100% - 60px);    
+    height: calc(100% - 60px); 
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items:center;   
     color:$white;
-    font-weight:500; 
+    font-weight:500;
+    perspective: 1000;
+
+    // &:hover{
+    //     .person-flipper{
+    //         transform:rotateY(180deg);
+    //     }
+    // }
+    
+    @include phones{
+        height:100%;
+    }
+
+    &-flipper{
+        width: rem(380px);
+        height:rem(430px);
+        transform-style:preserve-3d;
+        transition:0.8s;
+    }
 
 
     &__block{
-        width: 380px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:center;
+        width: rem(380px);        
+        position: absolute;
+        top:0;
+        left:0;
         background-color: $smoky;
-        border-radius:5px;
-        padding:40px 0px 0px 0px;
-        overflow:hidden;
+        border-radius:rem(5px);
+        padding:rem(40px) rem(0px) rem(0px) rem(0px);
+        overflow:hidden;        
 
-        &--auto{
-            width:auto;
+        &--front{
+            z-index:2;
+            backface-visibility: hidden;
         }
+
+        &--back{
+            transform: rotateY(180deg);
+            backface-visibility: hidden;            
+        }
+
+        @include tablets{
+            width:rem(350px);
+        }
+
+        @include phones{
+            width:rem(300px);
+        }
+
     }
 
     &__desc{
@@ -33,11 +77,17 @@
             justify-content: center;
             align-items: center;
             align-self: flex-start;
+
+            @include phones{
+                height: 100%;
+            }
         }
+
+
     }
 
     &__info{
-        max-width:350px;
+        max-width:rem(350px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -45,10 +95,15 @@
     }
 
     &__photo{
-        width: 170px;
-        height: 170px;
+        width:rem(170px);
+        height:rem(170px);
         border-radius: 50%;
-        margin-bottom: 20px;        
+        margin-bottom: rem(20px);  
+        
+        @include phones{
+            width:rem(140px);
+            height:rem(140px);
+        }
     }
 
     &__site{
@@ -63,7 +118,7 @@
     } 
     
     &__social{
-        height: 100px;
+        height: rem(100px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -71,7 +126,7 @@
 
     &__footer{
         width: 100%;
-        height: 60px;        
+        height: rem(60px);        
         display: flex;
         justify-content: center;
         align-items:flex-start;
@@ -83,22 +138,31 @@
 
         &-item{
             display:inline-block;          
-            margin-left: 1px;            
+            margin-left: rem(1px);            
             color:$light_font;
 
             &:after{
                 display: inline-block;
                 content: "";
-                height: 12px;
-                width: 2px;
+                height: rem(12px);
+                width: rem(2px);
                 vertical-align: baseline;
                 background-color:$light_font;                    
-                margin-left: 5px;
+                margin-left: rem(5px);
             }
     
             &:last-child{
                 &:after{
                     display: none;
+                }
+            }
+
+            @include phones{
+                &:first-child{
+                    display: block;
+                    &:after{
+                        display: none;
+                    }
                 }
             }
            
@@ -109,11 +173,11 @@
                 &:after{
                     display: inline-block;
                     content: "";
-                    height: 12px;
-                    width: 2px;
+                    height: rem(12px);
+                    width: rem(2px);
                     vertical-align: baseline;
                     background-color:$white; 
-                    margin-left: 5px;
+                    margin-left: rem(5px);
                 }
 
                 &:last-child{

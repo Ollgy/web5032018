@@ -7,55 +7,114 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css">
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDojHnKdAOsl-NipkgAqNo6xz-lHf1mieM&amp;callback=initMap"></script>
+    <scrpit src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></scrpit>
     <title>Portfolio</title>
   </head>
   <body>
     <div class="wrapper"> 
-      <section class="section" style="background-image:url('img/pages/welcome/bkg.jpg')">
+      <section class="section">
+        <div class="header__background header__background--webgl">
+          <canvas class="header__canvas"></canvas>
+        </div>
         <div class="container container--top">
-          <div class="autorization"><a class="autorization__link" href="autorize.html">Авторизоваться</a></div>
+          <div class="autorization"><a class="autorization__link" href="">Авторизоваться</a></div>
           <div class="person">
-            <div class="person__block person__block--auto">
-              <div class="person__info">
-                <div class="person__desc"><img class="person__photo" alt="Ольга Баранова" src="img/pages/welcome/photo2.jpg">
-                  <div class="title">Баранова Ольга</div>
-                  <p class="person__site">Личный сайт веб-разработчика</p>
+            <div class="person-flipper">
+              <div class="person__block person__block--front">
+                <div class="person__info">
+                  <div class="person__desc"><img class="person__photo" alt="Ольга Баранова" src="img/pages/welcome/photo2.jpg">
+                    <div class="title_mid">Баранова Ольга</div>
+                    <p class="person__site">Личный сайт веб-разработчика</p>
+                  </div>
+                  <div class="person__social">
+                        <ul class="social__list">
+                          <li class="social__item"><a class="social__link" href="vk.com">
+                              <svg class="social__icon">
+                                <use xlink:href="img/sprite.svg#vk"></use>
+                              </svg></a></li>
+                          <li class="social__item"><a class="social__link" href="github.io">
+                              <svg class="social__icon">
+                                <use xlink:href="img/sprite.svg#github"></use>
+                              </svg></a></li>
+                          <li class="social__item"><a class="social__link" href="in.com">
+                              <svg class="social__icon">
+                                <use xlink:href="img/sprite.svg#in"></use>
+                              </svg></a></li>
+                        </ul>
+                  </div>
                 </div>
-                <div class="person__social">
-                  <ul class="social__list">
-                    <li class="social__item"><a class="social__link" href="">
-                        <svg class="social__icon">
-                          <use xlink:href="img/sprite.svg#vk"></use>
-                        </svg></a></li>
-                    <li class="social__item"><a class="social__link" href="">
-                        <svg class="social__icon">
-                          <use xlink:href="img/sprite.svg#github"></use>
-                        </svg></a></li>
-                    <li class="social__item"><a class="social__link" href="">
-                        <svg class="social__icon">
-                          <use xlink:href="img/sprite.svg#in"></use>
-                        </svg></a></li>
+                <nav class="nav">
+                  <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="works.html">Мои работы</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+                    <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
                   </ul>
-                </div>
+                </nav>
               </div>
-              <nav class="nav">
-                <ul class="nav__list">
-                  <li class="nav__item"><a class="nav__link" href="works.html">Мои работы</a></li>
-                  <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
-                  <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
-                </ul>
-              </nav>
-              <footer class="person__footer">
-                <ul class="person__footer-list">
-                  <li class="person__footer-item">© Баранова Ольга</li>
-                  <li class="person__footer-item">Создано с любовью в LoftSchool</li>
-                  <li class="person__footer-item">2018</li>
-                </ul>
-              </footer>
+              <div class="person__block person__block--back">
+                <div class="about__title">
+                  <div class="title title--lowwhite">Авторизуйтесь</div>
+                </div>
+                <form class="form__connect" action="">
+                  <div class="form__text">
+                    <label class="form__block" for="">
+                      <div class="form__block-icon">
+                        <svg class="form__icon">
+                          <use href="img/sprite.svg#login"></use>
+                        </svg>
+                      </div>
+                      <input class="form__input form__input--bkgwhite" type="text" placeholder="Логин" id="login" name="login">
+                    </label>
+                    <label class="form__block" for="">
+                      <div class="form__block-icon">
+                        <svg class="form__icon">
+                          <use href="img/sprite.svg#password"></use>
+                        </svg>
+                      </div>
+                      <input class="form__input form__input--bkgwhite" type="text" placeholder="Пароль" id="password" name="password">
+                    </label>
+                    <div class="form__row">
+                      <label class="form__checkbox">
+                        <input class="form__checkbox-input" type="checkbox" id="norobot" name="norobot" value="1">
+                        <div class="form__checkbox-custom">
+                          <svg class="form__checkbox-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                          </svg>
+                        </div><span>Я человек</span>
+                      </label>
+                    </div>
+                    <div class="form__row"><b>Вы точно не робот?</b></div>
+                    <div class="form__row">
+                      <label class="form__radio">
+                        <input class="form__radio-btn" type="radio" name="robot" id="yes" value="Да" checked>
+                        <div class="form__radio-custom"></div><span class="form__radio-title">Да</span>
+                      </label>
+                      <label class="form__radio">
+                        <input class="form__radio-btn" type="radio" name="robot" id="No" value="No">
+                        <div class="form__radio-custom"></div><span class="form__radio-title">Не уверен</span>
+                      </label>
+                    </div>
+                    <div class="empty" style="width:100%; height:25px">                              </div>
+                  </div>
+                  <div class="form__buttons">
+                    <button class="form__button form__button--rightborder" type="button" id="mainbtn">На главную</button>
+                    <button class="form__button" type="submit" id="submit">Войти                     </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
+          <footer class="person__footer">
+            <ul class="person__footer-list">
+              <li class="person__footer-item">© Баранова Ольга</li>
+              <li class="person__footer-item">cоздано с любовью в LoftSchool</li>
+              <li class="person__footer-item">2018</li>
+            </ul>
+          </footer>
         </div>
       </section>
     </div>
+    <script src="assets/scripts/bundle.js">                      </script>
   </body>
 </html>

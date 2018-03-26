@@ -1,7 +1,7 @@
 .arrowdown{
     position: absolute;
     bottom:0;
-    margin-bottom: 70px;
+    margin-bottom: rem(70px);
     z-index:10;
 
     &__link{
@@ -10,12 +10,12 @@
     }
 
     &__icon{
-        width: 30px;
-        height: 15px;
+        width: rem(30px);
+        height: rem(15px);
         fill:$light_font;
 
         &:hover{
-            filter: drop-shadow(0 0 3px $main_dark);
+            fill:$white;
             transition: 0.5s
         }     
 

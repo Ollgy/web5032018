@@ -1,11 +1,31 @@
-include ../common/header.pug
-svg.portfolio__header
-    use(xlink:href="img/sprite.svg#portfolio_header")
-.person__desc.person__desc--bkg
-    img.person__photo(alt="Ольга Баранова" src='img/pages/welcome/photo2.jpg')
-    .title Баранова Ольга
-    p.person__site.person__site--white Личный сайт веб-разработчика
-.arrowdown
-    a(href="").arrowdown__link
-        svg.arrowdown__icon
-            use(xlink:href="img/sprite.svg#arrow_down")
+.header__background
+    img(src="img/pages/welcome/bkg.jpg").header__background-img
+.container
+    include ../common/header.pug
+    .header__overlay
+        .header__overlay-left
+        .header__overlay-right
+        nav.nav.nav--overlay
+            ul.nav__list
+                li.nav__item.nav__item--overlay
+                    a(href="works.html").nav__link
+                        .title.title--white Мои работы
+                li.nav__item.nav__item--overlay
+                    a(href="about.html").nav__link 
+                        .title.title--white Обо мне
+                li.nav__item.nav__item--overlay
+                    a(href="blog.html").nav__link 
+                        .title.title--white Блог 
+                li.nav__item.nav__item--overlay
+                    a(href="autorize.html").nav__link
+                        .title.title--white Авторизация  
+    svg.portfolio__header
+        use(xlink:href="img/sprite.svg#portfolio_header")
+    .person__desc.person__desc--bkg
+        img.person__photo(alt="Ольга Баранова" src='img/pages/welcome/photo2.jpg')
+        .title_mid Баранова Ольга
+        p.person__site.person__site--white Личный сайт веб-разработчика
+    .arrowdown
+        a(href="").arrowdown__link
+            svg.arrowdown__icon
+                use(xlink:href="img/sprite.svg#arrow_down")

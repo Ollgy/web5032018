@@ -2,9 +2,8 @@ extends ../common/general.pug
     
 block wrapper 
     .wrapper
-        section.section(style="background-image:url('img/pages/welcome/bkg.jpg')")
-            .container
-                include ../common/section_header.pug
+        section.section
+            include ../common/section_header.pug
         section.section.section--about
             .section__left.section__left--about
                 .triangle
@@ -15,7 +14,7 @@ block wrapper
                         .about__title
                             svg.about__icon
                                 use(xlink:href="img/sprite.svg#about_header")
-                            .title.title--dark Обо мне
+                            .title Обо мне
                         .about__info
                             img.about__photo(src="img/pages/about/photo1.jpg" alt="Фото1") 
                             .about__desc
@@ -55,7 +54,7 @@ block wrapper
                                             minima
                         .skills
                             .skills__block
-                                .title.title--small Frontend
+                                .title_low Frontend
                                 ul.skills__list
                                     li.skills__item
                                         .skills__name HTML5
@@ -73,7 +72,7 @@ block wrapper
                                             circle.skills__circle(r="45", cx="50%", cy="50%")
                                             circle.skills__circle.skills__circle--colored.circle-35(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
                             .skills__block
-                                .title.title--small Backend
+                                .title_low Backend
                                 ul.skills__list
                                     li.skills__item
                                         .skills__name PHP
@@ -96,7 +95,7 @@ block wrapper
                                             circle.skills__circle(r="45", cx="50%", cy="50%")
                                             circle.skills__circle.skills__circle--colored.circle-15(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
                             .skills__block
-                                .title.title--small Workflow
+                                .title_low Workflow
                                 ul.skills__list
                                     li.skills__item
                                         .skills__name GIT
@@ -115,29 +114,11 @@ block wrapper
                                             circle.skills__circle.skills__circle--colored.circle-15(r="45", cx="50%", cy="50%", transform="rotate(-90 55 55)")
     
         .section.section--map
-                .container
-                    .contacts
-                        .about__title
-                            .title.title--grey Контакты
-                        ul.contacts__list
-                            li.contacts__item
-                                a(href="").contacts__link
-                                    svg.contacts__icon
-                                        use(xlink:href="img/sprite.svg#skype")
-                                    .contacts__text olgabaranovaskype
-                            li.contacts__item
-                                a(href="").contacts__link
-                                    svg.contacts__icon
-                                        use(xlink:href="img/sprite.svg#envelope")
-                                    .contacts__text bo_40388@mail.ru
-                            li.contacts__item
-                                a(href="tel:879516473087").contacts__link
-                                    svg.contacts__icon
-                                        use(xlink:href="img/sprite.svg#phone")
-                                    .contacts__text +79516473087
-                            li.contacts__item
-                                a(href="").contacts__link
-                                    svg.contacts__icon
-                                        use(xlink:href="img/sprite.svg#map_marker")
-                                    .contacts__text г.Санкт-петербург ул.Есенина д.36 корп.1  
-        include ../common/footer.pug  
+                .container.container--vh.container--column
+                    .map(id="map") 
+                    include ../common/contacts.pug                                   
+                include ../common/footer.pug
+    script(src="assets/scripts/bundle.js")
+                                      
+                
+                     

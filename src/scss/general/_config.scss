@@ -7,10 +7,18 @@ html, body{
 
 body{
     font-family: 'Roboto', 'Arial';
-    font-size: 16px;
+    font-size: rem(16px);
     font-weight:400;
     line-height: 1.42;
     color: $mid_font;
+
+    @include tablets{
+        font-size: rem(15px);
+    }
+
+    @include phones{
+        font-size: rem(14px);
+    }
 }
 
 ul{
@@ -31,33 +39,44 @@ h1,h2,h3,h4,h5,h6{
 .wrapper {
     height:100%;
     min-width: 100%;
-    min-height:500px;
+    min-height:rem(500px);
     position:relative;
     overflow:hidden;
 
-    &--footer{
-        &:after{
-            display:block;
-            content:"";
-            height:$footer_height;   
-        }
-    }
+    // &--footer{
+    //     &:after{
+    //         display:block;
+    //         content:"";
+    //         height:$footer_height; 
+            
+    //         @include phones{
+    //             height:$footer_height-phones;
+    //         }
+        
+    //         @include tablets{
+    //             height:$footer_height-tablets;
+    //         }
+    //     }
+    // }
     
 }
 
 .container{
     width:100%;
-    max-width:1100px;
+    max-width:rem(1200px);
     height:100%;
     position: relative;
     display:flex;
     flex-direction: row; 
     justify-content: center;
     align-items: center;
-    //padding:3%; 
-
+   
     &--column{
         flex-direction: column;        
+    }
+
+    &--vh{
+        height: 100vh;
     }
 
     &--top{
@@ -66,17 +85,34 @@ h1,h2,h3,h4,h5,h6{
 
     &--about{
         width:100%;
-        max-width: 600px;
+        max-width: rem(600px);
         height:auto;
         justify-content:flex-start;
     }
 
     &--blog{
-        padding-top: 50px;
-        padding-bottom: 50px;
+        position: relative;
+        padding-top: rem(50px);
         align-items: flex-start;
+        flex-wrap:wrap;
+        min-width: 100%;
+        width: auto;
+        overflow:hidden;
+    }
+
+    &--slider{
+        position:absolute;
+        height:calc(100vh - 60px);
+        left: 50%;
+        transform: translate(-50%,0);
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;
     }
     
+    @include descktop1800{
+        max-width: 1600px;
+    }
 }
 
 
@@ -95,10 +131,15 @@ h1,h2,h3,h4,h5,h6{
     &--about{
         height:auto;
         min-height: 100vh;
+        
+        @include tablets{
+            flex-direction:column;
+        }
     }
 
     &--map{
-        height:calc(100vh + $footer_height);
+        height:auto;
+        flex-wrap:wrap;
         align-items: center;
     }
 
@@ -110,7 +151,10 @@ h1,h2,h3,h4,h5,h6{
         min-height: 100vh;
     }
 
+   
+
     &--blog{
+        
         background-color: $bkg_light;
         height:auto;
     }
@@ -118,25 +162,48 @@ h1,h2,h3,h4,h5,h6{
     &--review{
         min-height:100vh;
         height:auto;
-        padding-top:40px;
-        padding-bottom:40px;
+        padding-top:rem(40px);
 
         &__bkgphoto3{
             position: absolute;
             top:45%;
             right:2%;
+
+            @include tablets{
+               display:none;
+            }
+    
+            @include phones{
+                display:none;
+            }
         }
 
         &__bkgphoto2{
             position: absolute;
             top:5%;
             left:3%;
+
+            @include tablets{
+                display:none;
+            }
+     
+             @include phones{
+                 display:none;
+            }
         }
 
         &__bkgphoto1{
             position: absolute;
             top:55%;
             left:5%;
+
+            @include tablets{
+                display:none;
+            }
+     
+             @include phones{
+                 display:none;
+            }
         }
     }
 
@@ -147,6 +214,14 @@ h1,h2,h3,h4,h5,h6{
         justify-content: flex-end;
         padding:0 8% 3% 8%;
         background-color: $bkg_lightmain; 
+
+        @include tablets{
+           width: 100%;
+        }
+
+        @include phones{
+            width: 100%;
+         }
 
         &--work{
             padding:3% 8% 3% 8%;
@@ -161,13 +236,28 @@ h1,h2,h3,h4,h5,h6{
         display: flex;
         padding:0 3% 3% 3%;
 
+        @include tablets{
+            width: 100%;
+            padding-top: 5%;
+        }
+
+        @include phones{
+            width: 100%;
+            padding-top: 5%;
+        }
+
         &--about{
             background-color: $bkg_light; 
+            
+            @include phones{
+                padding-right: 3%;
+                padding-left: 3%;
+            }           
         }
 
         &--work{
             background-color: $bkg_lightgrey;
-            justify-content: center;
+            justify-content: center;           
             padding:3% 3% 3% 3%;            
         }
     }

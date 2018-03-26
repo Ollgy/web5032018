@@ -1,16 +1,23 @@
-.title{
-    font-size:35px;
+.title_mid{
+    font-size:rem(35px);
     color:$white;
 }
 
-.title--small{
-    font-size: 25px;
-    color: $light_font;
-    margin-bottom: 20px;
-}
-.title--dark{
+.title_mid--grey{
     font-family: 'sansus_webissimoregular','Arial';
-    font-size:63px;
+    color:$mid_font;
+    margin-bottom: rem(20px);
+}
+
+.title_low{
+    font-size: rem(25px);
+    color: $light_font;
+    margin-bottom: rem(20px);
+}
+
+.title{
+    font-family: 'sansus_webissimoregular','Arial';
+    font-size:rem(63px);
     color:$dark_font;
     text-transform:uppercase;
     display: flex;
@@ -18,98 +25,51 @@
     flex-direction: column;
     z-index:10;
     
+    @include phones{
+        font-size:rem(49px);
+    }
     
     &:after{
-        width: 90px;
-        height: 3px;
+        width: rem(90px);
+        height: rem(3px);
         display:block;
         content: "";
         background-color:$dark_font;
-        margin-top: 20px;
+        margin-top: rem(20px);
     }
 }
 
 .title--white{
-    font-family: 'sansus_webissimoregular','Arial';
-    font-size:63px;
-    color:$white;
-    text-transform:uppercase;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    z-index:10;    
-    
+    color:$white;     
     &:after{
-        width:90px;
-        height:3px;
-        display:block;
-        content: "";
-        background-color:$white;
-        margin-top: 20px;
-    }
-
+        background-color:$white;        
+    }   
 }
 
-.title--grey{
-    font-family: 'sansus_webissimoregular','Arial';
+.title--grey{    
     color:$mid_font;
-    font-size:35px;
-    text-transform:uppercase;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    z-index:10;
-    
+    font-size:rem(35px);    
     &:after{
-        width: 90px;
-        height: 3px;
-        display:block;
-        content: "";
-        background-color:$mid_font;
-        margin-top: 20px;
+        background-color:$mid_font;       
+    }
+
+    @include phones{
+        font-size:rem(20px);
     }
 }
 
-.title--greywu{
-    font-family: 'sansus_webissimoregular','Arial';
-    color:$mid_font;
-    font-size:35px;
-    margin-bottom: 20px;
-}
-
-.title--light{
-    font-family: 'sansus_webissimoregular','Arial';
+.title--light{    
     color:$light_font;
-    font-size:28px;
-    text-transform:uppercase;
-
+    font-size:rem(28px);    
     &:after{
-        width: 90px;
-        height: 3px;
-        display:block;
-        content: "";
         background-color:$light_font;
-        margin-top: 20px;
     }
 }
 
-.title--lowwhite{
-    font-family: 'sansus_webissimoregular','Arial';
-    font-size:28px;
-    color:$white;
-    text-transform:uppercase;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    z-index:10;    
-    
+.title--lowwhite{    
+    font-size:rem(28px);
+    color:$white;        
     &:after{
-        width:90px;
-        height:3px;
-        display:block;
-        content: "";
-        background-color:$white;
-        margin-top: 20px;
+        background-color:$white;        
     }
-
 }

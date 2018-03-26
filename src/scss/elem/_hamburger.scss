@@ -1,15 +1,28 @@
 .header__hamburger{
     
-    width: 40px;
-    height: 40px;
+    width: rem(40px);
+    height: rem(40px);
     position:relative;
     display: inline-block;
+    z-index:50;    
 
-    &:hover{
+    &--open{
         .header__hamburger-strip{
-        background-color: $main_dark;
-        transition: 0.5s;
+            background-color: $main_dark;
+            transition: 0.5s;
+    
+            &--top{
+                transform: translate(0,300%) rotate(45deg);            
+            }
+            &--center{
+               opacity:0;
+            }
+            &--bottom{
+                transform: translate(0,-300%) rotate(135deg);
         }
+
+    }   
+        
     }
     
     &-strip{
@@ -19,7 +32,20 @@
     margin-bottom: 25%;
     box-sizing: border-box;
     background-color: $white;
+    opacity:1;
     transition: 0.5s;
+
+    &:hover{
+        &--top{
+            transform: rotate(90deg)
+        }
+        &--center{
+           opacity:0;
+        }
+        &--top{
+            transform: rotate(-90deg)
+        }
+    }
 
     &:last-child{
         margin-bottom: 0;

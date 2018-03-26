@@ -23,6 +23,7 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-webpack": "^1.5.0",
     "uglifyjs-webpack-plugin": "^1.2.3",
-    "webpack": "^4.1.1"
+    "webpack": "^4.1.1",
+    "webpack-glsl-loader": "^1.0.1"
   }
 }

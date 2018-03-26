@@ -1,8 +1,8 @@
 .triangle {
    position:absolute;
    width: 100%;
-   height: 115px;
-   top:-115px;
+   height: rem(115px);
+   top:rem(-115px);
    left:0;
   
    
@@ -27,6 +27,14 @@
       right:0;
       fill:$bkg_light;
       display:inline-block;
+
+      @include tablets{
+        fill: $bkg_lightmain;
+      }
+
+      @include phones{
+        fill: $bkg_lightmain;
+      }
 
       &--work{
         fill:$bkg_light;

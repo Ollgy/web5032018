@@ -1,0 +1,8 @@
+mixin social(icon_class)
+    ul.social__list
+        -var items = {'vk.com':'vk', 'github.io':'github','in.com':'in'};                                               
+        each item, key in items
+            li.social__item
+                a(href=key).social__link
+                    svg(class = icon_class)
+                        use(xlink:href="img/sprite.svg#"+item)

@@ -1,6 +1,7 @@
+//color
 $white: #fff;
 $main: #82ab73;
-$main_middle:#689a57;
+$main_middle:#6c9c5a;
 $main_dark: #4e8839;
 $smoky: rgba(18, 38,32, 0.6);
 $smoky_light:rgba(224,224,220,0.6);
@@ -15,6 +16,14 @@ $bkg_lightgrey:#e2e4d7;
 $bkg_lightmain:#ebefe1;
 $bkg_light:#f4f5f0;
 
+//layout elements
 $footer_height:190px;
+$footer_height-tablets:270px;
+$footer_height-phones:500px;
 $personality_height:60px;
+
+//for media and adaptive
+$tablets: 768px;
+$phones: 480px;//320
+$descktop1800:1800px;
 

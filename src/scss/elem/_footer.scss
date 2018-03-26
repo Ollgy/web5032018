@@ -1,55 +1,112 @@
 .footer{
     width: 100%;
-    position:absolute;
+    position:relative;
     text-align:center;
-    bottom:0;
     font-weight:300;
+    align-self: flex-end;
 
     &__nav{
-        margin-bottom: 25px;
+        margin-bottom: rem(25px);
     }
 
     &__main{
         width: 100%;
         background-color: $smoky;
-        padding: 30px;
+        padding: rem(30px);
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
+        justify-content: center;
+
+        @include tablets{
+            padding: rem(20px);
+        }
+
+        @include phones{
+            padding: rem(10px);
+        }
+
+
+
     }
 
     &__where{
-        flex:1;
+        width: 33.3%;
         text-align: left;
-        color:$white;
+        color:$white;       
+    
+        @include tablets{
+            width:50%;
+        }
+
+        @include phones{
+            width:100%;
+            margin-bottom: rem(30px);
+            text-align: center;
+        }
     }
 
     &__info{
-        flex:1;
-        padding-right: 20px;
-        padding-left: 20px;
-        border-left:1px solid $footer_font;
-        border-right:1px solid $footer_font;
+        width: 33.3%;
+        padding-right: rem(20px);
+        padding-left: rem(20px);
+        border-left:rem(1px) solid $footer_font;
+        border-right:rem(1px) solid $footer_font;
+
+        @include tablets{
+            width:50%;
+            margin-bottom: rem(30px);
+            border-right:0;
+            padding-left: rem(15px);
+            padding-right: 0;
+        }
+
+        @include phones{
+            width:100%;
+            margin-bottom: rem(25px);
+            padding-bottom: rem(25px);            
+            border-right:0;
+            border-left: 0;
+            border-bottom:rem(1px) solid $footer_font;
+            text-align: center; 
+        }
+    
     }
 
     &__social{
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
+        @include phones{
+            justify-content: center;
+        }
     }
 
     &__credo{
-        flex:1;  
+        width: 33.3%;  
         height: 100%;   
         font-weight:300;
         font-style: italic;
         color:$footer_font;
         text-align: left;
-        padding-left: 35px;
+        padding-left: rem(35px);
+    
+        @include tablets{
+            width:100%;
+            padding-left: 0;
+        }
+
+        @include phones{
+            width:100%;
+            padding-left: 0;
+            text-align: center;
+        }
     }
 
     &__personality{
         background-color: $main;
-        padding: 10px;
+        padding: rem(10px);
     }
 
     &--relative{

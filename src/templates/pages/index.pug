@@ -1,43 +1,20 @@
 extends ../common/general.pug
     
 block wrapper 
+    include ../common/mixins.pug
     .wrapper 
-        section.section(style="background-image:url('img/pages/welcome/bkg.jpg')")
+        section.section
+            .header__background.header__background--webgl
+                canvas.header__canvas
             .container.container--top
                 .autorization
-                    a(href="autorize.html").autorization__link Авторизоваться
+                    a(href="").autorization__link Авторизоваться
                 .person
-                    .person__block.person__block--auto
-                        .person__info
-                            .person__desc
-                                img.person__photo(alt="Ольга Баранова" src='img/pages/welcome/photo2.jpg')
-                                .title Баранова Ольга
-                                p.person__site Личный сайт веб-разработчика
-                            .person__social
-                                ul.social__list
-                                    li.social__item
-                                        a(href="").social__link
-                                            svg.social__icon
-                                                use(xlink:href="img/sprite.svg#vk")
-                                    li.social__item
-                                        a(href="").social__link
-                                            svg.social__icon
-                                                use(xlink:href="img/sprite.svg#github")
-                                    li.social__item
-                                        a(href="").social__link
-                                            svg.social__icon
-                                                use(xlink:href="img/sprite.svg#in")
-                        nav.nav
-                            ul.nav__list
-                                li.nav__item
-                                    a(href="works.html").nav__link Мои работы
-                                li.nav__item
-                                    a(href="about.html").nav__link Обо мне
-                                li.nav__item
-                                    a(href="blog.html").nav__link Блог
-
-                        include ../common/personality.pug
-                       
+                    .person-flipper
+                        include ../common/person_block.pug
+                        include ../common/autoriz_form.pug
+                include ../common/personality.pug
+    script(src="assets/scripts/bundle.js")                       
                                                                 
 
 

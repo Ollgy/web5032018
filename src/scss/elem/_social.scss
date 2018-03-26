@@ -1,15 +1,12 @@
-.social{
+.social{  
 
     &__list{
-        //height: 100px;
-        //display: flex;
-        //align-items: center;
-        //justify-content: center;
+        z-index:5;
     }
     
     &__item{
         display:inline-block;
-        margin-right: 30px;
+        margin-right: rem(30px);
         
 
         &:last-child{
@@ -18,8 +15,8 @@
     }
     
     &__icon{
-        width: 35px;
-        height: 35px;
+        width: rem(35px);
+        height: rem(35px);
         fill:$light_font;
         position: center center;
         transition: 0.5s;

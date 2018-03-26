@@ -9,7 +9,16 @@ const config = {
         new UglifyPlugin ({
             sourceMap:true
         })
-    ]
+    ],    
+    // module: {
+    //     loaders: [
+    //         {
+    //             test: /\.(frag|vert)$/,
+    //             loader: 'webpack-glsl'
+    //         }
+    //     ]
+    // }
+    
 };
 
 module.exports = config;

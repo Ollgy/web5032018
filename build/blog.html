@@ -7,21 +7,61 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css">
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDojHnKdAOsl-NipkgAqNo6xz-lHf1mieM&amp;callback=initMap"></script>
+    <scrpit src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></scrpit>
     <title>Portfolio</title>
   </head>
   <body>
     <div class="wrapper wrapper--footer">
-      <section class="section" style="background-image:url('img/pages/welcome/bkg.jpg')">
-        <div class="container">
-          <div class="person__desc person__desc--bkg"><img class="person__photo" alt="Ольга Баранова" src="img/pages/welcome/photo2.jpg">
-            <div class="about__title">
-              <svg class="about__icon about__icon--blog">
-                <use xlink:href="img/sprite.svg#blog_header"></use>
-              </svg>
-              <div class="title title--white">Блог</div>
-            </div>
-            <p class="person__site person__site--white">Статьи, которые я написал</p>
+      <section class="section">           
+        <header class="header">
+          <div class="header__left">
+                    <ul class="social__list">
+                      <li class="social__item"><a class="social__link" href="vk.com">
+                          <svg class="social__icon social__icon--white">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link" href="github.io">
+                          <svg class="social__icon social__icon--white">
+                            <use xlink:href="img/sprite.svg#github"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link" href="in.com">
+                          <svg class="social__icon social__icon--white">
+                            <use xlink:href="img/sprite.svg#in"></use>
+                          </svg></a></li>
+                    </ul>
           </div>
+          <div class="header__right">
+            <div class="header__hamburger" id="hamburger"><a class="header_hamburger-link" href="">
+                <div class="header__hamburger-strip header__hamburger-strip--top"></div>
+                <div class="header__hamburger-strip header__hamburger-strip--center"></div>
+                <div class="header__hamburger-strip header__hamburger-strip--bottom"></div></a></div>
+          </div>
+        </header>
+        <div class="header__overlay">
+          <div class="header__overlay-left"></div>
+          <div class="header__overlay-right"></div>
+          <nav class="nav nav--overlay">
+            <ul class="nav__list">
+              <li class="nav__item nav__item--overlay"><a class="nav__link" href="works.html">
+                  <div class="title title--white">Мои работы</div></a></li>
+              <li class="nav__item nav__item--overlay"><a class="nav__link" href="about.html"> 
+                  <div class="title title--white">Обо мне</div></a></li>
+              <li class="nav__item nav__item--overlay"><a class="nav__link" href="blog.html"> 
+                  <div class="title title--white">Блог </div></a></li>
+              <li class="nav__item nav__item--overlay"><a class="nav__link" href="autorize.html">
+                  <div class="title title--white">Авторизация  </div></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="person__desc person__desc--bkg"><img class="person__photo" alt="Ольга Баранова" src="img/pages/welcome/photo2.jpg">
+          <div class="about__title">
+            <svg class="about__icon about__icon--blog">
+              <use xlink:href="img/sprite.svg#blog_header"></use>
+            </svg>
+            <div class="title title--white">Блог</div>
+          </div>
+          <p class="person__site person__site--white">Статьи, которые я написал</p>
         </div>
       </section>
       <section class="section section--blog">
@@ -37,6 +77,10 @@
         </div>
         <div class="container container--blog">
           <nav class="blognav">
+            <div class="blognav__svg-wrapper">
+              <svg class="blognav__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 40" preserveaspectratio="none"><a class="blognav__svg-link" href="">
+                  <ellipse class="blognav__svg-circle" cx="10" cy="20" rx="10" ry="20"></ellipse></a></svg>
+            </div>
             <ul class="blognav__list">
               <li class="blognav__item blognav__item--active"><a class="blognav__link" href="works.html">Самое важное в Sass</a></li>
               <li class="blognav__item"><a class="blognav__link" href="about.html">Приемы в верстке, без которых не обходится ни один сайт</a></li>
@@ -48,69 +92,70 @@
             <ul class="blogcontent__list">
               <li class="blogcontent__item"> 
                 <article class="blogcontent__article">
-                  <div class="title title--greywu">Самое важное в Sass</div>
+                  <div class="title_mid title_mid--grey">Самое важное в Sass</div>
                   <div class="blogcontent__date">22.01.2018</div>
                   <div class="blogcontent__text"> Таким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнять                                  </div>
                 </article>
               </li>
               <li class="blogcontent__item"> 
                 <article class="blogcontent__article">
-                  <div class="title title--greywu">Приемы в верстке, без которых не обходится ни один сайт</div>
+                  <div class="title_mid title_mid--grey">Приемы в верстке, без которых не обходится ни один сайт</div>
                   <div class="blogcontent__date">10.12.2017</div>
                   <div class="blogcontent__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнять</div>
                 </article>
               </li>
               <li class="blogcontent__item"> 
                 <article class="blogcontent__article">
-                  <div class="title title--greywu">Самый необходимый набор Gulp плагинов</div>
+                  <div class="title_mid title_mid--grey">Самый необходимый набор Gulp плагинов</div>
                   <div class="blogcontent__date">15.07.2017</div>
                   <div class="blogcontent__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнятьТаким образом начало повседневной работы по формированию позиции позволяет выполнять</div>
                 </article>
               </li>
             </ul>
           </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer__main">
-          <div class="footer__where">
-            <div class="footer__where-text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
-          </div>
-          <div class="footer__info">
-            <nav class="nav"></nav>
-            <ul class="nav__list nav__list--footer">
-              <li class="nav__item nav__item--footer"><a class="nav__link" href="works.html">Мои работы</a></li>
-              <li class="nav__item nav__item--footer"><a class="nav__link" href="about.html">Обо мне</a></li>
-              <li class="nav__item nav__item--footer"><a class="nav__link" href="blog.html">Блог </a></li>
-              <li class="nav__item nav__item--footer"><a class="nav__link" href="autorize.html">Авторизация  </a></li>
-            </ul>
-            <div class="footer__social">
-              <ul class="social__list">
-                <li class="social__item"><a class="social__link" href="">
-                    <svg class="social__icon social__icon--hoverwhite">
-                      <use xlink:href="img/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="social__item"><a class="social__link" href="">
-                    <svg class="social__icon social__icon--hoverwhite">
-                      <use xlink:href="img/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="social__item"><a class="social__link" href="">
-                    <svg class="social__icon social__icon--hoverwhite">
-                      <use xlink:href="img/sprite.svg#in"> </use>
-                    </svg></a></li>
+          <footer class="footer">
+            <div class="footer__main">
+              <div class="footer__where">
+                <div class="footer__where-text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+              </div>
+              <div class="footer__info">
+                <nav class="nav"></nav>
+                <ul class="nav__list nav__list--footer">
+                  <li class="nav__item nav__item--footer"><a class="nav__link" href="works.html">Мои работы</a></li>
+                  <li class="nav__item nav__item--footer"><a class="nav__link" href="about.html">Обо мне</a></li>
+                  <li class="nav__item nav__item--footer"><a class="nav__link" href="blog.html">Блог </a></li>
+                  <li class="nav__item nav__item--footer"><a class="nav__link" href="autorize.html">Авторизация  </a></li>
+                </ul>
+                <div class="footer__social">
+                            <ul class="social__list">
+                              <li class="social__item"><a class="social__link" href="vk.com">
+                                  <svg class="social__icon social__icon--hoverwhite">
+                                    <use xlink:href="img/sprite.svg#vk"></use>
+                                  </svg></a></li>
+                              <li class="social__item"><a class="social__link" href="github.io">
+                                  <svg class="social__icon social__icon--hoverwhite">
+                                    <use xlink:href="img/sprite.svg#github"></use>
+                                  </svg></a></li>
+                              <li class="social__item"><a class="social__link" href="in.com">
+                                  <svg class="social__icon social__icon--hoverwhite">
+                                    <use xlink:href="img/sprite.svg#in"></use>
+                                  </svg></a></li>
+                            </ul>
+                </div>
+              </div>
+              <div class="footer__credo">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.<b></b>— Martin Golding<b></b></div>
+            </div>
+            <div class="footer__personality">
+              <ul class="person__footer-list">
+                <li class="person__footer-item person__footer-item--white">© Баранова Ольга</li>
+                <li class="person__footer-item person__footer-item--white">Создано с любовью в LoftSchool</li>
+                <li class="person__footer-item person__footer-item--white">2018</li>
               </ul>
             </div>
-          </div>
-          <div class="footer__credo">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.<b></b>— Martin Golding<b></b></div>
+          </footer>
         </div>
-        <div class="footer__personality">
-          <ul class="person__footer-list">
-            <li class="person__footer-item person__footer-item--white">© Баранова Ольга</li>
-            <li class="person__footer-item person__footer-item--white">Создано с любовью в LoftSchool</li>
-            <li class="person__footer-item person__footer-item--white">2018</li>
-          </ul>
-        </div>
-      </footer>
+      </section>
     </div>
+    <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+include ../common/mixins.pug
 footer.footer
     .footer__main
         .footer__where
@@ -14,19 +15,7 @@ footer.footer
                 li.nav__item.nav__item--footer
                     a(href="autorize.html").nav__link Авторизация  
             .footer__social
-                ul.social__list
-                    li.social__item
-                        a(href="").social__link
-                            svg.social__icon.social__icon--hoverwhite
-                                use(xlink:href="img/sprite.svg#vk")
-                    li.social__item
-                        a(href="").social__link
-                            svg.social__icon.social__icon--hoverwhite
-                                use(xlink:href="img/sprite.svg#github")
-                    li.social__item
-                        a(href="").social__link
-                            svg.social__icon.social__icon--hoverwhite
-                                use(xlink:href="img/sprite.svg#in") 
+                +social("social__icon social__icon--hoverwhite")
         .footer__credo Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.#[b]— Martin Golding#[b]
                        
     .footer__personality

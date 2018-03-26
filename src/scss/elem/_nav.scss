@@ -1,27 +1,59 @@
-.nav{
-    
+.nav{    
     display: block;
     font-size:0;
 
+    &--overlay{
+        display:none;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);        
+        z-index:30;
+
+        &>.nav__list{
+            flex-direction: column;
+        }
+    }
+
     &__list{
-        &--footer{
-            display: flex;
-            justify-content: space-between;
+
+        display: flex;
+
+        &--footer{            
+            justify-content:start;
+            flex-wrap:wrap;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: rem(10px);
+        }       
+
+        @include phones{
+            justify-content:center;
         }
     }
     
       
-    &__item{  
-        display:inline-block;
-        padding: 10px 30px 10px 30px;
+    &__item{ 
+        flex:auto;
+        padding: rem(10px) 0 rem(10px) 0;
         background-color: $main;
         transition: 0.5s;
-        border-right: 3px solid $light_font;
+        border-right: rem(3px) solid $light_font;
+        text-align: center;
+        
 
         &:last-child{
             border: none;
+            margin-right: 0;
+        }
+
+        &--footer{
+            margin-right: 15px;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        @include phones{
+            padding: rem(10px) rem(25px) rem(10px) rem(25px);            
         }
 
 
@@ -41,11 +73,24 @@
             }
 
         }
+
+        &--overlay{
+            display:block;
+            background-color: transparent;
+            border-right: none;
+            padding: 0;
+            opacity:0;
+
+            &:hover{
+                background-color: transparent;              
+                
+            }
+        }
     }
     
     &__link{
         text-decoration:none;
         color: $white;
-        font-size:16px;
+        font-size:rem(16px);
     }
 }
