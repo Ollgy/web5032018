@@ -16,9 +16,17 @@ var scrollParallax = {
                 },
 
                 init: function(wScroll){
-                    this.move(bg,wScroll,60);
-                    this.move(img,wScroll,30);
-                    this.move(content,wScroll,15);
+
+                    if(bg){
+                        this.move(bg,wScroll,60);
+                    }
+                    if(img){
+                        this.move(img,wScroll,30);
+                    }   
+                    if(content){
+                        this.move(content,wScroll,15);
+                    }                     
+                   
                 }
             }
         }();

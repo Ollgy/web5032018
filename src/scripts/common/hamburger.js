@@ -26,7 +26,7 @@ var hamburger = {
                 nav.style.display = 'block';                 
                 
                 
-                for(i=0;i<nav_items.length;i++) {
+                for(var i=0;i<nav_items.length;i++) {
                     setTimeout(function (elem){
                         elem.style.opacity = '1';                            
                     }, 500*(i+1), nav_items[i]);                                          

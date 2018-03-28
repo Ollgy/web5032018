@@ -3,6 +3,7 @@ import Haze from './haze';
 import shader from './shaders/haze-water.frag';
 import TweenLite from 'gsap'
 
+var water = {webgl: function webgl(){
 const divSelector = '.header__background--webgl';
 const canvasSelector = '.header__canvas';
 const filePath = 'img/pages/welcome/bkg.jpg';
@@ -113,3 +114,8 @@ function updateSize(){
   haze.gl.createUniform('2f','resolution',haze.width*haze.dpi,haze.height*haze.dpi);
 }
 updateSize();
+
+  }
+}
+
+module.exports = water;
