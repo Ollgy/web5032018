@@ -5,8 +5,24 @@ var preloader = {
        //console.log(percentSvg);
         const preloader = document.querySelector('.preloader_bg'); 
         //console.log(preloader);
+        var percent = 0;
+        var time = 2000;//время загрузки
+
+        var intervalPercent = setInterval(function(){
+            
+            if(percent<100){
+                percent+=1;
+                console.log(percent);
+            } else if (percent=100){
+                percent=0;
+            }           
+            percentSvg.textContent = percent+'';
+        },time/100);
+
 
         window.onload = function(){
+            clearInterval(intervalPercent);
+            percentSvg.textContent = '100';
             preloader.style.transition = '1s';
             preloader.style.opacity = '0';
             setTimeout(function(){
@@ -14,33 +30,6 @@ var preloader = {
             }, 1500);
         }
 
-        // var  onImgLoad = function(className, percent){
-        //     const promise = new Promise(function(resolve){
-        //         const img = document.querySelector(className);
-        //         console.log(img);
-               
-        //         img.addEventListener('load',function(){
-        //             console.log("onload " +className);
-        //             percentSvg.textContent = percent;
-        //             resolve();
-        //         })               
-        //     })
-           
-        //     return promise;
-        // }
-
-        // onImgLoad('.person__photo','40').
-        //     then(function(){
-        //         console.log("return promise");
-        //         preloader.style.display = 'none';
-        //         return onLoadImg('.header__canvas','70')
-        //     }).
-        //     then(function(){
-        //         return onLoadImg('.person__photo','100')
-        //     }).
-        //     then(function(){
-        //         preloader.style.display = 'none';
-        //     })
     } 
 
 }

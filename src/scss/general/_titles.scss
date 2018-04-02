@@ -35,7 +35,7 @@
         display:block;
         content: "";
         background-color:$dark_font;
-        margin-top: rem(20px);
+        margin-top: rem(15px);
     }
 }
 
@@ -50,7 +50,8 @@
     color:$mid_font;
     font-size:rem(35px);    
     &:after{
-        background-color:$mid_font;       
+        background-color:$mid_font;
+        margin-top: rem(10px);       
     }
 
     @include phones{
@@ -63,6 +64,7 @@
     font-size:rem(28px);    
     &:after{
         background-color:$light_font;
+        margin-top: rem(10px);
     }
 }
 
@@ -70,6 +72,7 @@
     font-size:rem(28px);
     color:$white;        
     &:after{
-        background-color:$white;        
+        background-color:$white;
+        margin-top: rem(10px);        
     }
 }

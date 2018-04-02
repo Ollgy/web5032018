@@ -6,3 +6,22 @@ mixin social(icon_class)
                 a(href=key).social__link
                     svg(class = icon_class)
                         use(xlink:href="img/sprite.svg#"+item)
+
+mixin sliderInfo(title,text,link)
+    .about__title
+        .title.title--grey #{title}
+    .work__skills #{text}
+    a(href=link).autorization__link.autorization__link--green
+        svg.autorization__icon
+            use(xlink:href="img/sprite.svg#link") 
+        span Посмотреть сайт 
+
+mixin adminSkills(item_captures)    
+    ul.adminSkills__list
+        each val in item_captures
+            li.adminSkills__item
+                .adminSkills__item-title= val
+                .adminSkills__item-info
+                    input.adminSkills__input(type="text", placeholder="50", id=val, name=val)
+                    .adminSkills__item-percent='%'
+                           

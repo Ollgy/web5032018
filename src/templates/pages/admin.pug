@@ -1,0 +1,77 @@
+extends ../common/general.pug
+include ../common/mixins.pug
+
+block wrapper
+    section.section.section--admin
+        .section__bkg
+            .section__bkg-texture
+        .header__admin
+            .header__admin-container
+                .header__admin-title Панель администрирования
+                .header__admin-onsite
+                    a.header__admin-onsitelink(href="index.html") Вернуться на главную
+        nav.tabs
+            .tabs__container
+                -var tabs=['tab1','tab2','tab3','tab4']
+                ul.tabs__list
+                    each val in tabs
+                        li.tabs__item
+                            span= val
+        //- .admin__block.adminabout
+        //-     .admin__title-wrapper
+        //-         .admin__title Страница "Обо мне"
+        //-     form.adminabout__form
+        //-         ul.adminabout__list
+        //-             -var titles=['Frontend','Backend','Workflow']
+        //-             -var front=['Html','Css','Javascript']
+        //-             -var back=['PHP','Node.js','Mongo.db']
+        //-             -var workflow=['Git','Gulp','Webpack']
+        //-             -var skills = [front,back,workflow]
+
+        //-             each title, index in titles
+        //-                 li.adminabout__item
+        //-                     .adminSkills__title= title
+        //-                     +adminSkills(skills[index])
+        //-         .admin__button
+        //-             .button.form__button.form__button--admin(type="submit",  id="submit") Сохранить
+        
+        //- .admin__block.adminblog
+        //-     .admin__title-wrapper
+        //-         .admin__title Страница "Блог"
+        //-     form.adminblog__form
+        //-         .admin__lowtitle-wrapper
+        //-             .admin__lowtitle Добавить запись
+        //-         label.admin__label(for="")
+        //-             input.admin__input(type="text", placeholder="Название", id="title", name="title")
+                                   
+        //-         label.admin__label(for="")
+        //-             input.admin__input(type="text", placeholder="Дата", id="date", name="date")
+                                   
+        //-         label.admin__label(for="")
+        //-             textarea.admin__textarea(type="textarea", placeholder="Содержание", id="content", name="content")
+        //-     .admin__button
+        //-         .button.form__button.form__button--admin(type="submit",  id="submit") Добавить
+
+        .admin__block.adminworks
+            .admin__title-wrapper
+                .admin__title Страница "Мои работы"
+            form.adminblog__form
+                .admin__lowtitle-wrapper
+                    .admin__lowtitle Добавить запись
+                label.admin__label(for="")
+                    input.admin__input(type="text", placeholder="Название проекта", id="title", name="title")
+                                   
+                label.admin__label(for="")
+                    input.admin__input(type="text", placeholder="Технология", id="tech", name="tech")
+                                   
+                .addpicture__block
+                    a.addpicture__link(href="")
+                        img.addpicture__link-img(src="img/pages/admin/add_pic.png")
+                        span.addpicture__link-text Загрузить картинку
+
+            .admin__button
+                .button.form__button.form__button--admin(type="submit",  id="submit") Добавить
+
+
+        
+    

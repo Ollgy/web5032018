@@ -43,6 +43,14 @@
         text-transform:uppercase;
         margin-bottom: rem(60px);
         font-weight:500;
+
+        @include tablets{
+            margin-bottom: rem(20px);
+        }
+
+        @include phones{
+            margin-bottom: rem(20px);
+        }
     }
 }
 
@@ -135,66 +143,6 @@
 
 }
 
-.slider{
-    &__text{
-        grid-column:1/2;
-        grid-row:1/7; 
-        width: 100%;
-        height: 100%;      
-        display:flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items: center; 
-        background-color: $bkg_lightmain;
-        padding:3%;
-
-        @include tablets{
-            grid-column:1/3;
-            grid-row:4/6; 
-        }
-
-        @include phones{
-            grid-column:1/3;
-            grid-row:4/6; 
-        }      
-    }
-
-    &__image{
-        grid-column:2/3;
-        grid-row:1/5; 
-        width: 100%;
-        height: 100%;
-        background-color: red;
-
-        @include tablets{
-            grid-column:1/3;
-            grid-row:1/4; 
-        }
-
-        @include phones{
-            grid-column:1/3;
-            grid-row:1/4; 
-        }      
-    }
-
-    &__button{
-        grid-column:2/3;
-        grid-row:5/7; 
-        width: 100%;
-        height: 100%;
-        background-color: blue;
-
-        @include tablets{
-            grid-column:1/3;
-            grid-row:6/7; 
-        }
-
-        @include phones{
-            grid-column:1/3;
-            grid-row:6/7; 
-        }      
-    }
-}
 
 
 

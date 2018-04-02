@@ -17,6 +17,10 @@ const parallax = require('./common/parallax.js');
 const blognav = require('./common/blognav.js');
 const preloader = require('./common/preloader.js');
 const water = require('./water/index-water.js');
+const slider = require('./common/slider.js');
+const arrScrolling = require('./common/arrowdown.js');
+const skills = require('./common/skills.js');
+const form = require('./common/form.js');
 
 
 if(document.querySelector('.header__hamburger')){
@@ -42,6 +46,22 @@ if(document.querySelector('.blognav')){
 
 if(document.querySelector('.map')){
     //map.initMap();
+}
+
+if(document.querySelector('.slider__info')){
+    slider.slide(4);
+}
+
+if(document.querySelector('.arrowdown')){   
+    arrScrolling.nextSection();
+}
+
+if(document.querySelector('.skills')){
+    skills.animateCircle();
+}
+
+if(document.querySelector('.form__connect')){
+    form.submit();
 }
 
 

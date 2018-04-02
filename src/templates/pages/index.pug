@@ -1,26 +1,29 @@
 extends ../common/general.pug
     
-block wrapper 
+block wrapper
+    .preloader_bg.preloader_bg
+        svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 256 256;" xml:space="preserve").preloader_svg
+            g
+                path(class="preloader_svg-path .preloader_svg-path--top" id="top", fill="none", stroke="white", stroke-dasharray="110 110", stroke-width="3.9003", stroke-miterlimit="10", d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801	c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005")
+                    //- animate(attributeName="stroke-dashoffset" begin="0s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum")
+                    //- animate(attributeName="stroke-dasharray" begin="0.5s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear" )
+                            
+            g
+                path(class="preloader_svg-path preloader_svg-path--center" id="center", fill="none", stroke="white", stroke-dasharray="110 110", stroke-width="3.9003", stroke-miterlimit="10", d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684")
+                    //- animate(attributeName="stroke-dashoffset" begin="0.2s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum")
+                    //- animate(attributeName="stroke-dasharray" begin="0.7s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear")
+            g
+                path(class="preloader_svg-path preloader_svg-path--bottom" id="bottom", fill="none", stroke="white", stroke-dasharray="110 110", stroke-width="3.9003", stroke-miterlimit="10", d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362")
+                    //- animate(attributeName="stroke-dashoffset" begin="0.4s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum")
+                    //- animate(attributeName="stroke-dasharray" begin="0.9s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear")
+            text(id="preloader_percent" fill="white" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24")
     include ../common/mixins.pug
     .wrapper 
         section.section
-            .preloader_bg(style="background-image:url(img/pages/welcome/forest_prel_bg.jpg)").preloader_bg
-                svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 256 256;" xml:space="preserve").preloader_svg
-                    g
-                        path(id="top", fill="none", stroke="white", stroke-dasharray="110 110", stroke-width="3.9003", stroke-miterlimit="10", d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801	c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005")
-                            animate(attributeName="stroke-dashoffset" begin="0s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum")
-                            animate(attributeName="stroke-dasharray" begin="0.5s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear" )
-                            
-                    g
-                        path(id="center", fill="none", stroke="white", stroke-dasharray="110 110", stroke-width="3.9003", stroke-miterlimit="10", d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684")
-                            animate(attributeName="stroke-dashoffset" begin="0.2s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum")
-                            animate(attributeName="stroke-dasharray" begin="0.7s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear")
-                    g
-                        path(id="bottom", fill="none", stroke="white", stroke-dasharray="110 110", stroke-width="3.9003", stroke-miterlimit="10", d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362")
-                            animate(attributeName="stroke-dashoffset" begin="0.4s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum")
-                            animate(attributeName="stroke-dasharray" begin="0.9s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear")
-                    text(id="preloader_percent" fill="white" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24")
-                    
+            script(type="template" id="formTemplate")
+                .formmodal
+                    .formmodal__msg Сообщение
+                    .formmodal__btn Закрыть                
             .header__background.header__background--webgl
                 canvas.header__canvas
             .container.container--top
@@ -31,7 +34,9 @@ block wrapper
                         include ../common/person_block.pug
                         include ../common/autoriz_form.pug
                 include ../common/personality.pug
-    script(src="assets/scripts/bundle.js")                       
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src="assets/scripts/bundle.js")
+                       
                                                                 
 
 

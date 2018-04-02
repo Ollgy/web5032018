@@ -5,10 +5,13 @@
 @import "general/_fonts.scss";
 @import "general/_config.scss";
 @import "general/_titles.scss";
+
+@import "pages/_admin.scss";
 @import "pages/_welcome.scss";
 @import "pages/_about.scss";
 @import "pages/_work.scss";
 @import "pages/_blog.scss";
+
 @import "elem/_header.scss";
 @import "elem/_footer.scss";
 @import "elem/_hamburger.scss";
@@ -18,3 +21,5 @@
 @import "elem/_triangle.scss";
 @import "elem/_autoriz_btn.scss";
 @import "elem/_form.scss";
+@import "elem/_slider.scss";
+@import "elem/_dropdown.scss";

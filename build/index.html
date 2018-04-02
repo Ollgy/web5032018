@@ -12,31 +12,28 @@
     <title>Portfolio</title>
   </head>
   <body>
+    <div class="preloader_bg preloader_bg">
+      <svg class="preloader_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+        <g>
+          <path class="preloader_svg-path .preloader_svg-path--top" id="top" fill="none" stroke="white" stroke-dasharray="110 110" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801	c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"></path>
+        </g>
+        <g>
+          <path class="preloader_svg-path preloader_svg-path--center" id="center" fill="none" stroke="white" stroke-dasharray="110 110" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"></path>
+        </g>
+        <g>
+          <path class="preloader_svg-path preloader_svg-path--bottom" id="bottom" fill="none" stroke="white" stroke-dasharray="110 110" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"></path>
+        </g>
+        <text id="preloader_percent" fill="white" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24"></text>
+      </svg>
+    </div>
     <div class="wrapper"> 
       <section class="section">
-        <div class="preloader_bg preloader_bg" style="background-image:url(img/pages/welcome/forest_prel_bg.jpg)">
-          <svg class="preloader_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 256 256;" xml:space="preserve">
-            <g>
-              <path id="top" fill="none" stroke="white" stroke-dasharray="110 110" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801	c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005">
-                <animate attributeName="stroke-dashoffset" begin="0s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum"></animate>
-                <animate attributeName="stroke-dasharray" begin="0.5s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear"></animate>
-              </path>
-            </g>
-            <g>
-              <path id="center" fill="none" stroke="white" stroke-dasharray="110 110" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684">
-                <animate attributeName="stroke-dashoffset" begin="0.2s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum"></animate>
-                <animate attributeName="stroke-dasharray" begin="0.7s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear"></animate>
-              </path>
-            </g>
-            <g>
-              <path id="bottom" fill="none" stroke="white" stroke-dasharray="110 110" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801 c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801 c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362">
-                <animate attributeName="stroke-dashoffset" begin="0.4s" values="110;0" dur="1s" repeatCount="indefinite" calcMode="linear" additive="sum"></animate>
-                <animate attributeName="stroke-dasharray" begin="0.9s" values="0 110;50 60" dur="1s" repeatCount="indefinite" calcMode="linear"></animate>
-              </path>
-            </g>
-            <text id="preloader_percent" fill="white" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24"></text>
-          </svg>
-        </div>
+        <script type="template" id="formTemplate">
+          <div class="formmodal">
+            <div class="formmodal__msg">Сообщение</div>
+            <div class="formmodal__btn">Закрыть                </div>
+          </div>
+        </script>
         <div class="header__background header__background--webgl">
           <canvas class="header__canvas"></canvas>
         </div>
@@ -88,6 +85,7 @@
                         </svg>
                       </div>
                       <input class="form__input form__input--bkgwhite" type="text" placeholder="Логин" id="login" name="login">
+                      <div class="dropdown"><span class="dropdown__text">Вы не ввели</span></div>
                     </label>
                     <label class="form__block" for="">
                       <div class="form__block-icon">
@@ -96,6 +94,7 @@
                         </svg>
                       </div>
                       <input class="form__input form__input--bkgwhite" type="text" placeholder="Пароль" id="password" name="password">
+                      <div class="dropdown"><span class="dropdown__text">Вы не ввели</span></div>
                     </label>
                     <div class="form__row">
                       <label class="form__checkbox">
@@ -138,6 +137,7 @@
         </div>
       </section>
     </div>
-    <script src="assets/scripts/bundle.js">                      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>

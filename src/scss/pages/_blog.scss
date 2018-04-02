@@ -4,8 +4,9 @@
     display:flex;
     align-items: flex-start;
     padding-right: rem(50px);
+    padding-left: rem(10px);
     text-align: left; 
-    position:relative;  
+    position:relative; 
 
     @include tablets{
         display: none;
@@ -68,6 +69,7 @@
         }
 
         &-wrapper{
+            display:none;
             position: absolute;
             right:0;
             top:50%;
@@ -85,6 +87,10 @@
                 width: 50%;
                 background-color: $main;
             }
+
+            @include phones{
+                display:block;
+            }  
         }
 
         &-circle{

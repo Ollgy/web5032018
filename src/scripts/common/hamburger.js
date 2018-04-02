@@ -29,7 +29,7 @@ var hamburger = {
                 for(var i=0;i<nav_items.length;i++) {
                     setTimeout(function (elem){
                         elem.style.opacity = '1';                            
-                    }, 500*(i+1), nav_items[i]);                                          
+                    }, 300*(i+1), nav_items[i]);                                          
                 } //захардкодила время transitionа
                  
 
@@ -45,6 +45,10 @@ var hamburger = {
                 overlay_right.style.width = '0';
 
                 nav.style.display = 'none';
+
+                for(var i=0;i<nav_items.length;i++) {                   
+                    nav_items[i].style.opacity = '0';                                            
+                }
                 
                 setTimeout(function(){
                     overlay.style.zIndex = '0';//захардкодила время transitionа

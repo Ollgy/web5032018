@@ -70,6 +70,11 @@
             padding: rem(15px);
             margin-bottom: rem(20px);
             overflow: hidden;
+            
+
+            &:focus {
+                border: 3px solid $mid_font;
+            }
     
         }
     
@@ -103,6 +108,15 @@
             transition:0.5s;
             border: none;
             outline:0;
+            cursor:pointer;
+
+            &--admin{
+                flex:none;
+                display:inline-block;
+                padding:rem(12px) rem(15px) rem(12px) rem(15px);
+                border-radius:rem(5px);
+            }
+            
             
             &:hover{
                 background-color: $main_middle;
@@ -206,3 +220,41 @@
     
       }
     }
+
+.formmodal{   
+        
+    padding: rem(20px);
+    background-color: #fff;
+    border-radius:rem(3px);
+     
+    &__msg{
+         color:$mid_font;
+         margin-bottom:rem(20px);     
+    }
+
+    &__btn{
+        padding: rem(15px) rem(20px) rem(15px) rem(20px);
+        color:#fff;
+        background-color: $main;
+        transition: 0.8s;
+        border-radius: rem(5px);
+        cursor:pointer;
+
+        &:hover{
+            background-color: $main_dark;
+        }
+    }
+
+    &__bkg{
+        width: 100vw;
+        height: 100vh;
+        position:fixed;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        top:0;
+        left:0;
+        background-color: $main;
+        opacity:0.85;
+    }
+}

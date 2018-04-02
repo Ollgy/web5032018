@@ -1,4 +1,5 @@
 extends ../common/general.pug
+include ../common/mixins.pug
 
 block wrapper
     .wrapper
@@ -19,19 +20,50 @@ block wrapper
                 .section__left.section__left--work
                 .section__right.section__right--work                    
                 .container.container--slider
-                    .slider__text
-                        .about__title
-                            .title.title--grey Сайт школы образования
-                        .work__skills html, css, javascript
-                        a(href="").autorization__link.autorization__link--green
-                            svg.autorization__icon
-                                use(xlink:href="img/sprite.svg#link") 
-                            span Посмотреть сайт                   
-                    .slider__image 
+                    .slider__info
+                        .slider__info-list
+                            .slider__info-item.slider__info-item--active
+                                +sliderInfo('Школа онлайн образования','html, css, javascript','')
+                            .slider__info-item
+                                +sliderInfo('Авиакомпания AirPlanet','Воздушные путешествия','')
+                            .slider__info-item
+                                +sliderInfo('Burger','Самые сочные бургуеры','')
+                            .slider__info-item
+                                +sliderInfo('Компютерные игры Spotty Family','Цвета детства','')
+                    .slider__image
+                        .slider__image-list
+                            .slider__image-item(style="background-color:grey").slider__image-item--active
+                                .slider__image-num 1                                
+                            .slider__image-item(style="background-color:red") 
+                                .slider__image-num 2                              
+                            .slider__image-item(style="background-color:yellow")
+                                .slider__image-num 3                                
+                            .slider__image-item(style="background-color:green")
+                                .slider__image-num 4                               
                     .slider__button 
                         .slider__button-up
+                            a.slider__button-arrow(href="").slider__button-arrow--up
+                                svg.slider__button-svg
+                                    use(xlink:href="img/sprite.svg#arrow_down")
+                            .slider__button-list.slider__button-list--up
+                                .slider__button-item(style="background-color:grey")
+                                .slider__button-item(style="background-color:red")
+                                .slider__button-item(style="background-color:yellow")
+                                .slider__button-item(style="background-color:green")
                         .slider__button-down
+                            a.slider__button-arrow(href="").slider__button-arrow--down
+                                svg.slider__button-svg
+                                    use(xlink:href="img/sprite.svg#arrow_down")
+                            .slider__button-list.slider__button-list--down
+                                .slider__button-item(style="background-color:grey")
+                                .slider__button-item(style="background-color:red")
+                                .slider__button-item(style="background-color:yellow")
+                                .slider__button-item(style="background-color:green")
         section.section.section--review(style="background-image:url('img/pages/works/bkg.jpg')")
+            script(type="template" id="formTemplate")
+                .formmodal
+                    .formmodal__msg Сообщение
+                    .formmodal__btn Закрыть
             .container.container--column.container--review
                 img.section--review__bkgphoto1(src="img/pages/works/list1.png" alt="литст декор")
                 img.section--review__bkgphoto2(src="img/pages/works/list2.png" alt="литст декор")
@@ -63,17 +95,20 @@ block wrapper
                     .form__box
                         .about__title
                             .title.title--grey Связаться со мной
-                        form.form__connect(action="")
+                        form.form__connect(action="" method="GET")
                             .form__text
                                 label.form__block(for="")
                                     input.form__input(type="text", placeholder="Имя", id="name", name="name")
+                                    include ../common/dropdown.pug
                                 label.form__block(for="")
                                     input.form__input(type="text", placeholder="Email", id="email", name="email")
+                                    include ../common/dropdown.pug
                                 label.form__block(for="")
                                     textarea.form__textarea(type="textarea", placeholder="Ваше сообщение", id="comment", name="comment")
                             .form__buttons
                                 button.form__button.form__button--rightborder(type="submit",  id="submit") Отправить
                                 button.form__button(type="button",  id="mainbtn") На главную
-                include ../common/footer.pug
+                include ../common/footer.pug   
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script(src="assets/scripts/bundle.js")
 

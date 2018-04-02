@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css">
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDojHnKdAOsl-NipkgAqNo6xz-lHf1mieM&amp;callback=initMap"></script>
+    <scrpit src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></scrpit>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <section class="section section--admin">
+      <div class="section__bkg">
+        <div class="section__bkg-texture"></div>
+      </div>
+      <div class="header__admin">
+        <div class="header__admin-container">
+          <div class="header__admin-title">Панель администрирования</div>
+          <div class="header__admin-onsite"><a class="header__admin-onsitelink" href="index.html">Вернуться на главную</a></div>
+        </div>
+      </div>
+      <nav class="tabs">
+        <div class="tabs__container">
+          <ul class="tabs__list">
+            <li class="tabs__item"><span>tab1</span></li>
+            <li class="tabs__item"><span>tab2</span></li>
+            <li class="tabs__item"><span>tab3</span></li>
+            <li class="tabs__item"><span>tab4</span></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="admin__block adminworks">
+        <div class="admin__title-wrapper">
+          <div class="admin__title">Страница "Мои работы"</div>
+        </div>
+        <form class="adminblog__form">
+          <div class="admin__lowtitle-wrapper">
+            <div class="admin__lowtitle">Добавить запись</div>
+          </div>
+          <label class="admin__label" for="">
+            <input class="admin__input" type="text" placeholder="Название проекта" id="title" name="title">
+          </label>
+          <label class="admin__label" for="">
+            <input class="admin__input" type="text" placeholder="Технология" id="tech" name="tech">
+          </label>
+          <div class="addpicture__block"><a class="addpicture__link" href=""><img class="addpicture__link-img" src="img/pages/admin/add_pic.png"><span class="addpicture__link-text">Загрузить картинку</span></a></div>
+        </form>
+        <div class="admin__button">
+          <div class="button form__button form__button--admin" type="submit" id="submit">Добавить</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

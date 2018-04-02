@@ -8,11 +8,13 @@
                     svg.form__icon
                         use(href="img/sprite.svg#login")
                 input.form__input.form__input--bkgwhite(type="text", placeholder="Логин", id="login", name="login")
+                include ../common/dropdown.pug
             label.form__block(for="")
                 .form__block-icon
                     svg.form__icon
                             use(href="img/sprite.svg#password")
                 input.form__input.form__input--bkgwhite(type="text", placeholder="Пароль", id="password", name="password")
+                include ../common/dropdown.pug
             .form__row
                 label.form__checkbox
                     input.form__checkbox-input(type="checkbox", id="norobot", name="norobot", value='1')

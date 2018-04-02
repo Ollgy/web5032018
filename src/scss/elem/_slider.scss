@@ -1,0 +1,190 @@
+.slider{
+    &__info{
+        grid-column:1/2;
+        grid-row:1/7; 
+        width: 100%;
+        height: 100%;
+        background-color: $bkg_lightmain;
+        overflow: hidden;
+
+        &-list{
+            position:relative;
+            width: 100%;
+            height: 100%;           
+        }
+        
+        &-item{
+            position:absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;       
+            padding:3%;
+            opacity:0;
+            transition: 1s;
+
+            &--active{
+                opacity:1;
+                z-index:50;
+            }
+        }
+
+        @include tablets{
+            grid-column:1/3;
+            grid-row:4/6; 
+        }
+
+        @include phones{
+            grid-column:1/3;
+            grid-row:4/6; 
+        }      
+    }
+
+    &__image{
+        grid-column:2/3;
+        grid-row:1/5; 
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        &-list{
+            position:relative;
+            width: 100%;
+            height: 100%;           
+        }
+        
+        &-item{
+            position:absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;       
+            opacity:0;
+            transition: 1s;
+
+            &--active{
+                opacity:1;
+                z-index:50;
+            }
+        }
+
+        &-num{
+        }       
+
+        @include tablets{
+            grid-column:1/3;
+            grid-row:1/4; 
+        }
+
+        @include phones{
+            grid-column:1/3;
+            grid-row:1/4; 
+        }      
+    }
+
+    &__button{
+        grid-column:2/3;
+        grid-row:5/7; 
+        width: 100%;
+        height: 100%;
+        display:flex;
+        
+
+        @include tablets{
+            grid-column:1/3;
+            grid-row:6/7; 
+        }
+
+        @include phones{
+            grid-column:1/3;
+            grid-row:6/7; 
+        }
+        
+        &-up{
+            width: 50%;
+            height: 100%;
+            position:relative;
+            overflow:hidden;
+        }
+
+        &-down{
+            width: 50%;
+            height: 100%;
+            position:relative;
+            overflow:hidden;
+        }
+
+        &-list{
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            display:block;
+            position:relative;
+            transition:0.8s;
+
+            &--up{
+                .slider__button-item{
+                    bottom:0;
+                }
+            }
+
+            &--down{
+                .slider__button-item{
+                    top:0;
+                }
+            }
+        }
+
+        &-item{
+            position:absolute;            
+            left:0;
+            width: 100%;
+            height: 0;
+            opacity:0;            
+            transition:0.6s;
+            z-index:1;            
+
+            &--active{
+                height:100%;
+                opacity:1;
+                z-index:30;              
+                transition:0.6s; 
+            }
+        }
+
+        &-arrow{
+            position:absolute;
+            display:block;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            z-index:50;
+
+            &--up{
+                transform: translate(-50%,-50%) rotate(180deg);
+            }
+            
+        }
+        
+        &-svg{
+            
+            width: rem(50px);
+            height: rem(50px);
+            fill: $white;
+            
+            &:hover{
+                fill:$main;
+            }
+            
+        }
+    }
+}

@@ -85,10 +85,24 @@
                 background-color: transparent;              
                 
             }
+
+            .nav__link>.title--white:after{
+                opacity:0;
+                transition:0.3s;
+            }
+
+            .nav__link:hover>.title--white:after{
+                    opacity:1;
+                    transition:0.3s;
+            }
+            
         }
     }
     
     &__link{
+        display:inline-block;
+        width: 100%;
+        height: 100%;
         text-decoration:none;
         color: $white;
         font-size:rem(16px);

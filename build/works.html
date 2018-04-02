@@ -90,24 +90,96 @@
           <div class="section__left section__left--work"></div>
           <div class="section__right section__right--work">                   </div>
           <div class="container container--slider">
-            <div class="slider__text">
-              <div class="about__title">
-                <div class="title title--grey">Сайт школы образования</div>
+            <div class="slider__info">
+              <div class="slider__info-list">
+                <div class="slider__info-item slider__info-item--active">
+                            <div class="about__title">
+                              <div class="title title--grey">Школа онлайн образования</div>
+                            </div>
+                            <div class="work__skills">html, css, javascript</div><a class="autorization__link autorization__link--green" href="">
+                              <svg class="autorization__icon">
+                                <use xlink:href="img/sprite.svg#link"> </use>
+                              </svg><span>Посмотреть сайт </span></a>
+                </div>
+                <div class="slider__info-item">
+                            <div class="about__title">
+                              <div class="title title--grey">Авиакомпания AirPlanet</div>
+                            </div>
+                            <div class="work__skills">Воздушные путешествия</div><a class="autorization__link autorization__link--green" href="">
+                              <svg class="autorization__icon">
+                                <use xlink:href="img/sprite.svg#link"> </use>
+                              </svg><span>Посмотреть сайт </span></a>
+                </div>
+                <div class="slider__info-item">
+                            <div class="about__title">
+                              <div class="title title--grey">Burger</div>
+                            </div>
+                            <div class="work__skills">Самые сочные бургуеры</div><a class="autorization__link autorization__link--green" href="">
+                              <svg class="autorization__icon">
+                                <use xlink:href="img/sprite.svg#link"> </use>
+                              </svg><span>Посмотреть сайт </span></a>
+                </div>
+                <div class="slider__info-item">
+                            <div class="about__title">
+                              <div class="title title--grey">Компютерные игры Spotty Family</div>
+                            </div>
+                            <div class="work__skills">Цвета детства</div><a class="autorization__link autorization__link--green" href="">
+                              <svg class="autorization__icon">
+                                <use xlink:href="img/sprite.svg#link"> </use>
+                              </svg><span>Посмотреть сайт </span></a>
+                </div>
               </div>
-              <div class="work__skills">html, css, javascript</div><a class="autorization__link autorization__link--green" href="">
-                <svg class="autorization__icon">
-                  <use xlink:href="img/sprite.svg#link"> </use>
-                </svg><span>Посмотреть сайт                   </span></a>
             </div>
-            <div class="slider__image"> </div>
+            <div class="slider__image">
+              <div class="slider__image-list">
+                <div class="slider__image-item slider__image-item--active" style="background-color:grey">
+                  <div class="slider__image-num">1                                </div>
+                </div>
+                <div class="slider__image-item" style="background-color:red"> 
+                  <div class="slider__image-num">2                              </div>
+                </div>
+                <div class="slider__image-item" style="background-color:yellow">
+                  <div class="slider__image-num">3                                </div>
+                </div>
+                <div class="slider__image-item" style="background-color:green">
+                  <div class="slider__image-num">4                               </div>
+                </div>
+              </div>
+            </div>
             <div class="slider__button"> 
-              <div class="slider__button-up"></div>
-              <div class="slider__button-down"></div>
+              <div class="slider__button-up"><a class="slider__button-arrow slider__button-arrow--up" href="">
+                  <svg class="slider__button-svg">
+                    <use xlink:href="img/sprite.svg#arrow_down"></use>
+                  </svg></a>
+                <div class="slider__button-list slider__button-list--up">
+                  <div class="slider__button-item" style="background-color:grey"></div>
+                  <div class="slider__button-item" style="background-color:red"></div>
+                  <div class="slider__button-item" style="background-color:yellow"></div>
+                  <div class="slider__button-item" style="background-color:green"></div>
+                </div>
+              </div>
+              <div class="slider__button-down"><a class="slider__button-arrow slider__button-arrow--down" href="">
+                  <svg class="slider__button-svg">
+                    <use xlink:href="img/sprite.svg#arrow_down"></use>
+                  </svg></a>
+                <div class="slider__button-list slider__button-list--down">
+                  <div class="slider__button-item" style="background-color:grey"></div>
+                  <div class="slider__button-item" style="background-color:red"></div>
+                  <div class="slider__button-item" style="background-color:yellow"></div>
+                  <div class="slider__button-item" style="background-color:green"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <section class="section section--review" style="background-image:url('img/pages/works/bkg.jpg')">
+        <script type="template" id="formTemplate">
+          <div class="formmodal">
+            <div class="formmodal__msg">Сообщение</div>
+            <div class="formmodal__btn">Закрыть</div>
+          </div>
+        </script>
         <div class="container container--column container--review"><img class="section--review__bkgphoto1" src="img/pages/works/list1.png" alt="литст декор"><img class="section--review__bkgphoto2" src="img/pages/works/list2.png" alt="литст декор"><img class="section--review__bkgphoto3" src="img/pages/works/list3.png" alt="литст декор">
           <div class="about__title">
             <svg class="about__icon about__icon--work">
@@ -136,13 +208,15 @@
               <div class="about__title">
                 <div class="title title--grey">Связаться со мной</div>
               </div>
-              <form class="form__connect" action="">
+              <form class="form__connect" action="" method="GET">
                 <div class="form__text">
                   <label class="form__block" for="">
                     <input class="form__input" type="text" placeholder="Имя" id="name" name="name">
+                    <div class="dropdown"><span class="dropdown__text">Вы не ввели</span></div>
                   </label>
                   <label class="form__block" for="">
                     <input class="form__input" type="text" placeholder="Email" id="email" name="email">
+                    <div class="dropdown"><span class="dropdown__text">Вы не ввели</span></div>
                   </label>
                   <label class="form__block" for="">
                     <textarea class="form__textarea" type="textarea" placeholder="Ваше сообщение" id="comment" name="comment"></textarea>
@@ -198,6 +272,7 @@
         </div>
       </section>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/scripts/bundle.js"></script>
   </body>
 </html>

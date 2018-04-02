@@ -1,4 +1,5 @@
 var flipper = {
+
     flip: function() {
        
         const btn_autoriz = document.querySelector('.autorization__link'); 
@@ -7,6 +8,7 @@ var flipper = {
         console.log(flipper);
         const background = document.querySelector('.person');
         console.log(background);
+        const onmainBtn = document.getElementById('mainbtn');
 
         var isAutorization = false;
 
@@ -15,15 +17,13 @@ var flipper = {
             e.preventDefault();
             e.stopPropagation();
 
-            if(!isAutorization){
-              
+            if(!isAutorization){              
                 flipper.style.transform = 'rotateY(180deg)';        
                 isAutorization=true;
-
             } 
         })
 
-        background.addEventListener('click', function (e) {           
+        onmainBtn.addEventListener('click', function (e) {           
             
             e.preventDefault();
             
@@ -46,4 +46,3 @@ var flipper = {
 }
 
 module.exports = flipper;
-//export {flipper as flipper};
