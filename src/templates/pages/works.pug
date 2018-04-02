@@ -107,7 +107,7 @@ block wrapper
                                     textarea.form__textarea(type="textarea", placeholder="Ваше сообщение", id="comment", name="comment")
                             .form__buttons
                                 button.form__button.form__button--rightborder(type="submit",  id="submit") Отправить
-                                button.form__button(type="button",  id="mainbtn") На главную
+                                button.form__button(type="button",  id="mainbtn" onclick="location.href='index.html'") На главную
                 include ../common/footer.pug   
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script(src="assets/scripts/bundle.js")
